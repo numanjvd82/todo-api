@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const formatDate = require('../utils/date');
 
 const Schema = mongoose.Schema;
 

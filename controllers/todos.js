@@ -20,13 +20,25 @@ const createTodos = async (req, res) => {
   }
 };
 
-const getSpecificTodo = async (req, res, id) => {
+const getSpecificTodo = async (req, res) => {
+  const { id } = req.params;
   try {
-    const todo = await TodosSchema.findById(req.params.id);
+    const todo = await TodosSchema.findById(id);
     res.status(200).json(todo);
   } catch (error) {
     res.status(404).json({ msg: error.message });
   }
 };
 
-module.exports = { getAllTodos, createTodos, getSpecificTodo };
+const updateTodo = async (req, res) => {
+  const updatedTodo = req.body;
+  const { id } = req.params;
+  try {
+    const todo = await TodosSchema.findByIdAndUpdate(id, updatedTodo);
+    res.status(200).json(todo);
+  } catch (error) {
+    res.status(404).json({ msg: error.message });
+  }
+};
+
+module.exports = { getAllTodos, createTodos, getSpecificTodo, updateTodo };
