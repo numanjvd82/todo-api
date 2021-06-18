@@ -3,8 +3,11 @@ Todo Api made with Node and Express using a NoSQL Database(MongoDB Atlas).
 
 #To run the project\
 Clone the repo and open with your code editor\.
+
 Run the Given Scripts\.
+
 You can hit the endpoints in the browser which only includes GET requests\.
+
 To hit any other endpoints other than get you need Postman or Insomnia\.
 
 #Endpoints\
