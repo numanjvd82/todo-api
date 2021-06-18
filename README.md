@@ -1,4 +1,4 @@
-# Todo-API\
+# Todo-API
 Todo Api made with Node and Express using a NoSQL Database(MongoDB Atlas). 
 
 #To run the project\
